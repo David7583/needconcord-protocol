@@ -1,0 +1,21 @@
+{
+  "service_type": "managed_matching",
+  "charge_model": "success_fee",
+  "fee_rate": 0.0035,
+  "fee_basis": "confirmed eligible transaction value excluding separately disclosed taxes and third-party charges",
+  "charge_trigger": "contractually confirmed qualifying transaction",
+  "consent_recorded": true,
+  "charge_unit_id": "deal-001",
+  "payout_splits": [
+    {
+      "beneficiary": "operator",
+      "share_rate": 0.002
+    },
+    {
+      "beneficiary": "agent_channel",
+      "share_rate": 0.0015
+    }
+  ],
+  "refund_policy_ref": "https://example.invalid/policy/returns",
+  "disclosure": "示例：单一撮合交易只计费一次。实际计费由合同约定。"
+}

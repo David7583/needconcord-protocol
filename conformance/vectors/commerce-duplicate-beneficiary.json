@@ -1,0 +1,72 @@
+{
+  "protocol": "ODIP/0.1.3-exp.1",
+  "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e3",
+  "message_type": "proposal.submit",
+  "timestamp": "2026-11-03T08:12:15Z",
+  "sender": {
+    "participant_id": "merchant-adapter",
+    "capabilities": [
+      "provide_goods"
+    ]
+  },
+  "intent_id": "need-001",
+  "payload": {
+    "proposal_id": "proposal-002",
+    "target_intent_id": "need-001",
+    "solution_type": "goods",
+    "description": "某防护型厨房辅助工具（仅用于结构演示，并非真实商品）",
+    "satisfies": [
+      "减少手部接近刀具"
+    ],
+    "gaps": [
+      "需要核验尺寸和适用性"
+    ],
+    "pricing": [
+      {
+        "component": "goods",
+        "cost": {
+          "amount": 120,
+          "currency": "CNY"
+        }
+      },
+      {
+        "component": "transport",
+        "cost": {
+          "amount": 12,
+          "currency": "CNY"
+        }
+      }
+    ],
+    "source": {
+      "kind": "user_submitted",
+      "description": "模拟商品数据"
+    },
+    "promotion": {
+      "sponsored": false
+    },
+    "ranking_explanation": "总已知费用 132 元，未包含未知费用"
+  },
+  "extensions": {
+    "commerce": {
+      "service_type": "managed_matching",
+      "charge_model": "success_fee",
+      "fee_rate": 0.0035,
+      "fee_basis": "confirmed eligible transaction value excluding separately disclosed taxes and third-party charges",
+      "charge_trigger": "contractually confirmed qualifying transaction",
+      "consent_recorded": true,
+      "charge_unit_id": "deal-001",
+      "payout_splits": [
+        {
+          "beneficiary": "operator",
+          "share_rate": 0.002
+        },
+        {
+          "beneficiary": "operator",
+          "share_rate": 0.0015
+        }
+      ],
+      "refund_policy_ref": "https://example.invalid/policy/returns",
+      "disclosure": "示例：单一撮合交易只计费一次。实际计费由合同约定。"
+    }
+  }
+}

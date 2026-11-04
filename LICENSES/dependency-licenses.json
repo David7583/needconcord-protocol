@@ -1,0 +1,289 @@
+[
+  {
+    "name": "attrs",
+    "version": "26.1.0",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": [],
+    "project_urls": [
+      "Documentation, https://www.attrs.org/",
+      "Changelog, https://www.attrs.org/en/stable/changelog.html",
+      "GitHub, https://github.com/python-attrs/attrs",
+      "Funding, https://github.com/sponsors/hynek",
+      "Tidelift, https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi"
+    ],
+    "wheel": "attrs-26.1.0-py3-none-any.whl",
+    "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+    "license_files": [
+      "attrs-26.1.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "license_expression": null,
+    "license": null,
+    "classifiers": [
+      "License :: OSI Approved :: BSD License"
+    ],
+    "project_urls": [
+      "Homepage, https://github.com/tartley/colorama"
+    ],
+    "wheel": "colorama-0.4.6-py2.py3-none-any.whl",
+    "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+    "license_files": [
+      "colorama-0.4.6.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "coverage",
+    "version": "7.8.0",
+    "license_expression": null,
+    "license": "Apache-2.0",
+    "classifiers": [],
+    "project_urls": [
+      "Documentation, https://coverage.readthedocs.io/en/7.8.0",
+      "Funding, https://tidelift.com/subscription/pkg/pypi-coverage?utm_source=pypi-coverage&utm_medium=referral&utm_campaign=pypi",
+      "Issues, https://github.com/nedbat/coveragepy/issues",
+      "Mastodon, https://hachyderm.io/@coveragepy",
+      "Mastodon (nedbat), https://hachyderm.io/@nedbat"
+    ],
+    "wheel": "coverage-7.8.0-cp312-cp312-win_amd64.whl",
+    "sha256": "e5d2b9be5b0693cf21eb4ce0ec8d211efb43966f6657807f6859aab3814f946b",
+    "license_files": [
+      "coverage-7.8.0.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.1",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": [],
+    "project_urls": [
+      "Homepage, https://github.com/pytest-dev/iniconfig"
+    ],
+    "wheel": "iniconfig-2.3.1-py3-none-any.whl",
+    "sha256": "9121e2c1fdb355232495be3194c8dfe87ccc2d5dee45947b78e68f499790d7a7",
+    "license_files": [
+      "iniconfig-2.3.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "jsonschema",
+    "version": "4.23.0",
+    "license_expression": null,
+    "license": "MIT",
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "project_urls": [
+      "Homepage, https://github.com/python-jsonschema/jsonschema",
+      "Documentation, https://python-jsonschema.readthedocs.io/",
+      "Issues, https://github.com/python-jsonschema/jsonschema/issues/",
+      "Funding, https://github.com/sponsors/Julian",
+      "Tidelift, https://tidelift.com/subscription/pkg/pypi-jsonschema?utm_source=pypi-jsonschema&utm_medium=referral&utm_campaign=pypi-link",
+      "Changelog, https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+      "Source, https://github.com/python-jsonschema/jsonschema"
+    ],
+    "wheel": "jsonschema-4.23.0-py3-none-any.whl",
+    "sha256": "fbadb6f8b144a8f8cf9f0b89ba94501d143e50411a1278633f56a7acf7fd5566",
+    "license_files": [
+      "jsonschema-4.23.0.dist-info/licenses/COPYING"
+    ]
+  },
+  {
+    "name": "jsonschema-specifications",
+    "version": "2025.9.1",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": [],
+    "project_urls": [
+      "Documentation, https://jsonschema-specifications.readthedocs.io/",
+      "Homepage, https://github.com/python-jsonschema/jsonschema-specifications",
+      "Issues, https://github.com/python-jsonschema/jsonschema-specifications/issues/",
+      "Funding, https://github.com/sponsors/Julian",
+      "Tidelift, https://tidelift.com/subscription/pkg/pypi-jsonschema-specifications?utm_source=pypi-jsonschema-specifications&utm_medium=referral&utm_campaign=pypi-link",
+      "Source, https://github.com/python-jsonschema/jsonschema-specifications"
+    ],
+    "wheel": "jsonschema_specifications-2025.9.1-py3-none-any.whl",
+    "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+    "license_files": [
+      "jsonschema_specifications-2025.9.1.dist-info/licenses/COPYING"
+    ]
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license_expression": "Apache-2.0 OR BSD-2-Clause",
+    "license": null,
+    "classifiers": [],
+    "project_urls": [
+      "Documentation, https://packaging.pypa.io/",
+      "Source, https://github.com/pypa/packaging"
+    ],
+    "wheel": "packaging-26.3-py3-none-any.whl",
+    "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+    "license_files": [
+      "packaging-26.3.dist-info/licenses/LICENSE",
+      "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+      "packaging-26.3.dist-info/licenses/LICENSE.BSD"
+    ]
+  },
+  {
+    "name": "pip",
+    "version": "24.2",
+    "license_expression": null,
+    "license": "MIT",
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "project_urls": [
+      "Homepage, https://pip.pypa.io/",
+      "Documentation, https://pip.pypa.io",
+      "Source, https://github.com/pypa/pip",
+      "Changelog, https://pip.pypa.io/en/stable/news/"
+    ],
+    "wheel": "pip-24.2-py3-none-any.whl",
+    "sha256": "2cd581cf58ab7fcfca4ce8efa6dcacd0de5bf8d0a3eb9ec927e07405f4d9e2a2",
+    "license_files": [
+      "pip-24.2.dist-info/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "pluggy",
+    "version": "1.7.0",
+    "license_expression": null,
+    "license": "MIT",
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "project_urls": [
+      "Homepage, https://github.com/pytest-dev/pluggy",
+      "Documentation, https://pluggy.readthedocs.io/",
+      "Changelog, https://pluggy.readthedocs.io/en/latest/changelog.html",
+      "Repository, https://github.com/pytest-dev/pluggy",
+      "Issues, https://github.com/pytest-dev/pluggy/issues",
+      "Funding, https://tidelift.com/subscription/pkg/pypi-pluggy"
+    ],
+    "wheel": "pluggy-1.7.0-py3-none-any.whl",
+    "sha256": "7dd7b0d8832ba3cb632c306926ded123429211b83641b35dc5c41ad2d34f9bec",
+    "license_files": [
+      "pluggy-1.7.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "pytest",
+    "version": "8.3.5",
+    "license_expression": null,
+    "license": "MIT",
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "project_urls": [
+      "Changelog, https://docs.pytest.org/en/stable/changelog.html",
+      "Contact, https://docs.pytest.org/en/stable/contact.html",
+      "Funding, https://docs.pytest.org/en/stable/sponsor.html",
+      "Homepage, https://docs.pytest.org/en/latest/",
+      "Source, https://github.com/pytest-dev/pytest",
+      "Tracker, https://github.com/pytest-dev/pytest/issues"
+    ],
+    "wheel": "pytest-8.3.5-py3-none-any.whl",
+    "sha256": "c69214aa47deac29fad6c2a4f590b9c4a9fdb16a403176fe154b79c0b4d4d820",
+    "license_files": [
+      "pytest-8.3.5.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "referencing",
+    "version": "0.37.0",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": [],
+    "project_urls": [
+      "Documentation, https://referencing.readthedocs.io/",
+      "Homepage, https://github.com/python-jsonschema/referencing",
+      "Issues, https://github.com/python-jsonschema/referencing/issues/",
+      "Funding, https://github.com/sponsors/Julian",
+      "Tidelift, https://tidelift.com/subscription/pkg/pypi-referencing?utm_source=pypi-referencing&utm_medium=referral&utm_campaign=pypi-link",
+      "Changelog, https://referencing.readthedocs.io/en/stable/changes/",
+      "Source, https://github.com/python-jsonschema/referencing"
+    ],
+    "wheel": "referencing-0.37.0-py3-none-any.whl",
+    "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+    "license_files": [
+      "referencing-0.37.0.dist-info/licenses/COPYING"
+    ]
+  },
+  {
+    "name": "rfc3339-validator",
+    "version": "0.1.4",
+    "license_expression": null,
+    "license": "MIT license",
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "project_urls": [],
+    "wheel": "rfc3339_validator-0.1.4-py2.py3-none-any.whl",
+    "sha256": "24f6ec1eda14ef823da9e36ec7113124b39c04d50a4d3d3a3c2859577e7791fa",
+    "license_files": [
+      "rfc3339_validator-0.1.4.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "rpds-py",
+    "version": "2026.9.1",
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": [],
+    "project_urls": [
+      "Documentation, https://rpds.readthedocs.io/",
+      "Funding, https://github.com/sponsors/Julian",
+      "Homepage, https://github.com/crate-py/rpds",
+      "Issues, https://github.com/crate-py/rpds/issues/",
+      "Source, https://github.com/crate-py/rpds",
+      "Tidelift, https://tidelift.com/subscription/pkg/pypi-rpds-py?utm_source=pypi-rpds-py&utm_medium=referral&utm_campaign=pypi-link",
+      "Upstream, https://github.com/orium/rpds"
+    ],
+    "wheel": "rpds_py-2026.9.1-cp312-cp312-win_amd64.whl",
+    "sha256": "5ce8943f79c2210f7abcc28e86367b03b28d95027fd01c46d2472373ae70c86f",
+    "license_files": [
+      "rpds_py-2026.9.1.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "license_expression": null,
+    "license": "MIT",
+    "classifiers": [
+      "License :: OSI Approved :: MIT License"
+    ],
+    "project_urls": [],
+    "wheel": "six-1.17.0-py2.py3-none-any.whl",
+    "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+    "license_files": [
+      "six-1.17.0.dist-info/LICENSE"
+    ]
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license_expression": "PSF-2.0",
+    "license": null,
+    "classifiers": [],
+    "project_urls": [
+      "Bug Tracker, https://github.com/python/typing_extensions/issues",
+      "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+      "Documentation, https://typing-extensions.readthedocs.io/",
+      "Home, https://github.com/python/typing_extensions",
+      "Q & A, https://github.com/python/typing/discussions",
+      "Repository, https://github.com/python/typing_extensions"
+    ],
+    "wheel": "typing_extensions-4.16.0-py3-none-any.whl",
+    "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+    "license_files": [
+      "typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+    ]
+  }
+]

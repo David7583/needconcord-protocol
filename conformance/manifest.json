@@ -1,0 +1,484 @@
+{
+  "format": "odip-conformance-v1",
+  "protocol": "ODIP/0.1.3-exp.1",
+  "synthetic": true,
+  "vectors": [
+    {
+      "id": "valid-capability.transport",
+      "layer": "schema",
+      "file": "vectors/valid-capability.transport.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-fulfillment.quote",
+      "layer": "schema",
+      "file": "vectors/valid-fulfillment.quote.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": [
+        "fulfillment"
+      ]
+    },
+    {
+      "id": "valid-intent.publish",
+      "layer": "schema",
+      "file": "vectors/valid-intent.publish.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-outcome.no_purchase",
+      "layer": "schema",
+      "file": "vectors/valid-outcome.no_purchase.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-proposal.goods",
+      "layer": "schema",
+      "file": "vectors/valid-proposal.goods.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-proposal.nontransaction",
+      "layer": "schema",
+      "file": "vectors/valid-proposal.nontransaction.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-intent.update",
+      "layer": "schema",
+      "file": "vectors/valid-intent.update.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-intent.withdraw",
+      "layer": "schema",
+      "file": "vectors/valid-intent.withdraw.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-receipt.ack",
+      "layer": "schema",
+      "file": "vectors/valid-receipt.ack.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-capability.advertise",
+      "layer": "schema",
+      "file": "vectors/missing-capability.advertise.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-fulfillment.quote",
+      "layer": "schema",
+      "file": "vectors/missing-fulfillment.quote.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": [
+        "fulfillment"
+      ]
+    },
+    {
+      "id": "missing-intent.publish",
+      "layer": "schema",
+      "file": "vectors/missing-intent.publish.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-outcome.report",
+      "layer": "schema",
+      "file": "vectors/missing-outcome.report.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-proposal.submit",
+      "layer": "schema",
+      "file": "vectors/missing-proposal.submit.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-intent.update",
+      "layer": "schema",
+      "file": "vectors/missing-intent.update.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-intent.withdraw",
+      "layer": "schema",
+      "file": "vectors/missing-intent.withdraw.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-receipt.ack",
+      "layer": "schema",
+      "file": "vectors/missing-receipt.ack.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "missing-intent-id-intent.publish",
+      "layer": "schema",
+      "file": "vectors/missing-intent-id-intent.publish.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-02",
+      "requires": []
+    },
+    {
+      "id": "missing-intent-id-intent.update",
+      "layer": "schema",
+      "file": "vectors/missing-intent-id-intent.update.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-02",
+      "requires": []
+    },
+    {
+      "id": "missing-intent-id-intent.withdraw",
+      "layer": "schema",
+      "file": "vectors/missing-intent-id-intent.withdraw.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-02",
+      "requires": []
+    },
+    {
+      "id": "missing-intent-id-proposal.submit",
+      "layer": "schema",
+      "file": "vectors/missing-intent-id-proposal.submit.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-02",
+      "requires": []
+    },
+    {
+      "id": "missing-intent-id-outcome.report",
+      "layer": "schema",
+      "file": "vectors/missing-intent-id-outcome.report.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-02",
+      "requires": []
+    },
+    {
+      "id": "missing-intent-id-fulfillment.quote",
+      "layer": "schema",
+      "file": "vectors/missing-intent-id-fulfillment.quote.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-02",
+      "requires": [
+        "fulfillment"
+      ]
+    },
+    {
+      "id": "bad-uuid",
+      "layer": "schema",
+      "file": "vectors/bad-uuid.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "uppercase-uuid",
+      "layer": "schema",
+      "file": "vectors/uppercase-uuid.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-solution-service",
+      "layer": "schema",
+      "file": "vectors/valid-solution-service.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-solution-custom_solution",
+      "layer": "schema",
+      "file": "vectors/valid-solution-custom_solution.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-solution-no_match",
+      "layer": "schema",
+      "file": "vectors/valid-solution-no_match.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-01",
+      "requires": []
+    },
+    {
+      "id": "valid-unmet-confirmed",
+      "layer": "semantic",
+      "file": "vectors/valid-unmet-confirmed.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "M-03",
+      "requires": []
+    },
+    {
+      "id": "valid-inferred-pending",
+      "layer": "semantic",
+      "file": "vectors/valid-inferred-pending.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "M-02",
+      "requires": []
+    },
+    {
+      "id": "bad-version",
+      "layer": "schema",
+      "file": "vectors/bad-version.json",
+      "schema_valid": false,
+      "expected_code": "VERSION_UNSUPPORTED",
+      "rule": "S-03",
+      "requires": []
+    },
+    {
+      "id": "non-utc-time",
+      "layer": "schema",
+      "file": "vectors/non-utc-time.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-04",
+      "requires": []
+    },
+    {
+      "id": "invalid-calendar-date",
+      "layer": "schema",
+      "file": "vectors/invalid-calendar-date.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-04",
+      "requires": []
+    },
+    {
+      "id": "lowercase-time",
+      "layer": "schema",
+      "file": "vectors/lowercase-time.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-04",
+      "requires": []
+    },
+    {
+      "id": "rejected-without-code",
+      "layer": "schema",
+      "file": "vectors/rejected-without-code.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-05",
+      "requires": []
+    },
+    {
+      "id": "bad-commerce-rate",
+      "layer": "schema",
+      "file": "vectors/bad-commerce-rate.json",
+      "schema_valid": false,
+      "expected_code": "SCHEMA_INVALID",
+      "rule": "S-06",
+      "requires": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "unknown-noncritical-extension",
+      "layer": "schema",
+      "file": "vectors/unknown-noncritical-extension.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "S-07",
+      "requires": []
+    },
+    {
+      "id": "id-mismatch",
+      "layer": "semantic",
+      "file": "vectors/id-mismatch.json",
+      "schema_valid": true,
+      "expected_code": "ID_MISMATCH",
+      "rule": "M-01",
+      "requires": []
+    },
+    {
+      "id": "inferred-confirmed",
+      "layer": "semantic",
+      "file": "vectors/inferred-confirmed.json",
+      "schema_valid": true,
+      "expected_code": "INFERRED_ASSERTION",
+      "rule": "M-02",
+      "requires": []
+    },
+    {
+      "id": "inferred-satisfied",
+      "layer": "semantic",
+      "file": "vectors/inferred-satisfied.json",
+      "schema_valid": true,
+      "expected_code": "INFERRED_ASSERTION",
+      "rule": "M-02",
+      "requires": []
+    },
+    {
+      "id": "confirmed-no-evidence",
+      "layer": "semantic",
+      "file": "vectors/confirmed-no-evidence.json",
+      "schema_valid": true,
+      "expected_code": "EVIDENCE_REQUIRED",
+      "rule": "M-03",
+      "requires": []
+    },
+    {
+      "id": "commerce-overallocation",
+      "layer": "semantic",
+      "file": "vectors/commerce-overallocation.json",
+      "schema_valid": true,
+      "expected_code": "COMMERCE_INVALID",
+      "rule": "M-04",
+      "requires": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce-duplicate-beneficiary",
+      "layer": "semantic",
+      "file": "vectors/commerce-duplicate-beneficiary.json",
+      "schema_valid": true,
+      "expected_code": "COMMERCE_INVALID",
+      "rule": "M-04",
+      "requires": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce-valid",
+      "layer": "semantic",
+      "file": "vectors/commerce-valid.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "M-04",
+      "requires": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce-unconsented-disclosure",
+      "layer": "semantic",
+      "file": "vectors/commerce-unconsented-disclosure.json",
+      "schema_valid": true,
+      "expected_code": null,
+      "rule": "M-05",
+      "requires": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "private-network-intent",
+      "layer": "semantic",
+      "file": "vectors/private-network-intent.json",
+      "schema_valid": true,
+      "expected_code": "PRIVACY_DENIED",
+      "rule": "P-01",
+      "requires": []
+    },
+    {
+      "id": "commerce-precision-overallocation",
+      "layer": "semantic",
+      "file": "vectors/commerce-precision-overallocation.json",
+      "schema_valid": true,
+      "expected_code": "COMMERCE_INVALID",
+      "rule": "M-04",
+      "requires": [
+        "commerce"
+      ]
+    }
+  ],
+  "sequences": [
+    {
+      "id": "core-lifecycle",
+      "file": "sequences/core-lifecycle.json",
+      "requires": []
+    },
+    {
+      "id": "lifecycle",
+      "file": "sequences/lifecycle.json",
+      "requires": [
+        "fulfillment"
+      ]
+    },
+    {
+      "id": "duplicate-and-conflict",
+      "file": "sequences/duplicate-and-conflict.json",
+      "requires": []
+    },
+    {
+      "id": "authorization-revision-withdrawal",
+      "file": "sequences/authorization-revision-withdrawal.json",
+      "requires": []
+    },
+    {
+      "id": "unknown-links",
+      "file": "sequences/unknown-links.json",
+      "requires": [
+        "fulfillment"
+      ]
+    },
+    {
+      "id": "duplicate-domain-ids",
+      "file": "sequences/duplicate-domain-ids.json",
+      "requires": []
+    }
+  ]
+}

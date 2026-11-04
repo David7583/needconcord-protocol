@@ -1,0 +1,111 @@
+{
+  "executed_at": "2026-11-04T05:34:39.755049+00:00",
+  "mode": "public-source",
+  "environment": {
+    "python": "3.12.7",
+    "platform": "win32",
+    "architecture": "AMD64"
+  },
+  "runs": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "coverage",
+        "run",
+        "-m",
+        "pytest",
+        "--basetemp=.tmp/pytest-20261104T053340804240Z",
+        "--junitxml=evidence/pytest.xml"
+      ],
+      "exit_code": 0,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.12.7, pytest-8.3.5, pluggy-1.7.0\nrootdir: .\nconfigfile: pyproject.toml\ntestpaths: tests\ncollected 91 items\n\ntests\\test_conformance.py .............................................. [ 50%]\n...........                                                              [ 62%]\ntests\\test_runtime.py .....................                              [ 85%]\ntests\\test_semantics.py .............                                    [100%]\n\n- generated xml file: .\\evidence\\pytest.xml -\n============================= 91 passed in 22.00s =============================\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "coverage",
+        "json",
+        "-o",
+        "evidence/coverage.json"
+      ],
+      "exit_code": 0,
+      "stdout": "Wrote JSON report to evidence/coverage.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "coverage",
+        "report"
+      ],
+      "exit_code": 0,
+      "stdout": "Name                 Stmts   Miss Branch BrPart  Cover   Missing\n----------------------------------------------------------------\nodip\\__init__.py         1      0      0      0   100%\nodip\\node.py           259    166     76      4    33%   31, 36-53, 57-60, 69-75, 78-85, 88-91, 94-99, 103, 111-112, 115, 118-128, 131-134, 137-182, 205, 208-209, 229-230, 232, 239-240, 253-256, 260-303, 307\nodip\\store.py          117     17     56     10    79%   58->exit, 73, 83, 88, 90, 92, 96, 99-108, 109->exit, 117\nodip\\validation.py     105      6     50      7    92%   28, 68, 93, 102, 107, 112, 120->122\n----------------------------------------------------------------\nTOTAL                  482    189    182     21    58%\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/conformance.py",
+        "--report",
+        "evidence/conformance-run.json",
+        "--",
+        "python",
+        "reference/conformance_adapter.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Conformance: 53/53; report: evidence/conformance-run.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/conformance.py",
+        "--profile",
+        "core",
+        "--report",
+        "evidence/conformance-core-run.json",
+        "--",
+        "python",
+        "reference/conformance_adapter.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Conformance: 42/42; report: evidence/conformance-core-run.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "reference/two_process_demo.py",
+        "--work-dir",
+        ".tmp/evidence-20261104T053340804240Z",
+        "--report",
+        "evidence/two-process-evidence.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"report\": \"evidence/two-process-evidence.json\", \"synthetic\": true}\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "coverage_scope": "coverage.py parent-process Python lines/branches only; subprocess and network evidence reported separately",
+  "redaction": "Executable/project/base-interpreter paths replaced by portable labels; JUnit hostname omitted; synthetic token values removed. Outcomes, timestamps and diagnostics retained.",
+  "claim_limits": {
+    "production_network_security_verified": false,
+    "cross_implementation_interoperability_verified": false
+  }
+}

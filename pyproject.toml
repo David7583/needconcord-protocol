@@ -1,0 +1,18 @@
+[project]
+name = "odip-reference-experimental"
+version = "0.1.3.dev1"
+description = "NeedConcord Protocol experimental reference for the ODIP/0.1.3-exp.1 wire format"
+requires-python = "==3.12.7"
+dependencies = ["jsonschema==4.23.0", "rfc3339-validator==0.1.4"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["."]
+
+[tool.coverage.run]
+source = ["odip"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true

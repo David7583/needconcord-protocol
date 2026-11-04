@@ -1,0 +1,31 @@
+{
+  "scope": "Minimal selected historical compatibility fixtures, not the complete research baseline",
+  "synthetic_examples": true,
+  "license_scope": "Apache-2.0 only to the extent the initiator has authority to license; historical provenance uncertainty retained",
+  "files": [
+    {
+      "path": "schemas/packet.schema.json",
+      "sha256": "2ab03a14999d080724cda01e5a5af7a95e8a0fd8b81d5d2a6c2669e38f75257a",
+      "source_archive_path": "ODIP-v0.1.2/schemas/packet.schema.json",
+      "modified": false
+    },
+    {
+      "path": "examples/intent.publish.json",
+      "sha256": "655350224594b7adc1e0c754b6cd1ff358b6a8cda0b282060f08b5eddb296bbf",
+      "source_archive_path": "ODIP-v0.1.2/examples/intent.publish.json",
+      "modified": false
+    },
+    {
+      "path": "examples/outcome.no_purchase.json",
+      "sha256": "9842ece2b6cc9babed7eebdaa192467a8dd8746efe30331ee6c3fa2221310bff",
+      "source_archive_path": "ODIP-v0.1.2/examples/outcome.no_purchase.json",
+      "modified": false
+    },
+    {
+      "path": "examples/commerce.example.json",
+      "sha256": "5508f1fc8203375177140fa82f4b2f592508c96ac7a65a9d2f909aff9f4efeea",
+      "source_archive_path": "ODIP-v0.1.2/examples/commerce.example.json",
+      "modified": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/odip/0.1.2/packet.schema.json",
+  "title": "ODIP Packet v0.1.2 (Experimental)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol", "message_id", "message_type", "timestamp", "sender", "payload"],
+  "properties": {
+    "protocol": {"const": "ODIP/0.1.2"},
+    "message_id": {"type": "string", "format": "uuid"},
+    "message_type": {"enum": ["intent.publish", "intent.update", "intent.withdraw", "capability.advertise", "proposal.submit", "outcome.report", "receipt.ack", "fulfillment.quote"]},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "sender": {"$ref": "#/$defs/participant"},
+    "intent_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "payload": {"type": "object"},
+    "extensions": {"type": "object", "additionalProperties": true}
+  },
+  "allOf": [
+    {"if": {"properties": {"message_type": {"const": "intent.publish"}}}, "then": {"properties": {"payload": {"$ref": "#/$defs/intent"}}}},
+    {"if": {"properties": {"message_type": {"const": "intent.update"}}}, "then": {"properties": {"payload": {"type": "object", "additionalProperties": false, "required": ["target_intent_id", "revision", "intent"], "properties": {"target_intent_id": {"type": "string", "minLength": 1}, "revision": {"type": "integer", "minimum": 2}, "intent": {"$ref": "#/$defs/intent"}}}}}},
+    {"if": {"properties": {"message_type": {"const": "intent.withdraw"}}}, "then": {"properties": {"payload": {"type": "object", "additionalProperties": false, "required": ["target_intent_id"], "properties": {"target_intent_id": {"type": "string", "minLength": 1}, "reason": {"type": "string", "maxLength": 500}}}}}},
+    {"if": {"properties": {"message_type": {"const": "capability.advertise"}}}, "then": {"properties": {"payload": {"type": "object", "additionalProperties": false, "required": ["kind", "description"], "properties": {"kind": {"enum": ["goods", "service", "transport", "analysis", "other"]}, "description": {"type": "string", "minLength": 1}, "constraints": {"type": "object"}, "valid_until": {"type": "string", "format": "date-time"}}}}}},
+    {"if": {"properties": {"message_type": {"const": "proposal.submit"}}}, "then": {"properties": {"payload": {"$ref": "#/$defs/proposal"}}}},
+    {"if": {"properties": {"message_type": {"const": "outcome.report"}}}, "then": {"properties": {"payload": {"$ref": "#/$defs/outcome"}}}},
+    {"if": {"properties": {"message_type": {"const": "receipt.ack"}}}, "then": {"properties": {"payload": {"type": "object", "additionalProperties": false, "required": ["original_message_id", "status"], "properties": {"original_message_id": {"type": "string", "format": "uuid"}, "status": {"enum": ["accepted", "rejected", "duplicate"]}, "reason_code": {"type": "string"}}}}}},
+    {"if": {"properties": {"message_type": {"const": "fulfillment.quote"}}}, "then": {"properties": {"payload": {"type": "object", "additionalProperties": false, "required": ["proposal_id", "origin", "destination", "quote"], "properties": {"proposal_id": {"type": "string", "minLength": 1}, "origin": {"type": "string", "minLength": 1}, "destination": {"type": "string", "minLength": 1}, "quote": {"$ref": "#/$defs/money"}, "estimated_delivery": {"type": "string", "format": "date-time"}, "service_terms": {"type": "string"}}}}}}
+  ],
+  "$defs": {
+    "participant": {"type": "object", "additionalProperties": false, "required": ["participant_id"], "properties": {"participant_id": {"type": "string", "minLength": 1}, "capabilities": {"type": "array", "uniqueItems": true, "items": {"enum": ["express_demand", "provide_goods", "provide_services", "provide_transport", "provide_analysis"]}}}},
+    "money": {"type": "object", "additionalProperties": false, "required": ["amount", "currency"], "properties": {"amount": {"type": "number", "minimum": 0}, "currency": {"type": "string", "pattern": "^[A-Z]{3}$"}}},
+    "intent": {"type": "object", "additionalProperties": false, "required": ["original_text", "desired_outcome", "readiness", "alternatives_acceptable", "user_confirmed", "privacy"], "properties": {"original_text": {"type": "string", "minLength": 1}, "desired_outcome": {"type": "string", "minLength": 1}, "readiness": {"enum": ["exploring", "want", "need", "ready_to_purchase", "committed_elsewhere"]}, "alternatives_acceptable": {"type": "boolean"}, "user_confirmed": {"type": "boolean"}, "interpretation_notes": {"type": "string"}, "constraints": {"type": "object", "additionalProperties": false, "properties": {"budget_ceiling": {"$ref": "#/$defs/money"}, "region": {"type": "string"}, "quantity": {"type": "number", "exclusiveMinimum": 0}, "deadline": {"type": "string", "format": "date-time"}, "specifications": {"type": "object"}}}, "privacy": {"type": "object", "additionalProperties": false, "required": ["sharing_scope", "allow_aggregate_analytics"], "properties": {"sharing_scope": {"enum": ["private", "selected_participants", "public"]}, "allow_aggregate_analytics": {"type": "boolean"}}}}},
+    "proposal": {"type": "object", "additionalProperties": false, "required": ["proposal_id", "target_intent_id", "solution_type", "description", "source", "promotion"], "properties": {"proposal_id": {"type": "string", "minLength": 1}, "target_intent_id": {"type": "string", "minLength": 1}, "solution_type": {"enum": ["goods", "service", "custom_solution", "non_transactional_solution", "no_match"]}, "description": {"type": "string", "minLength": 1}, "satisfies": {"type": "array", "items": {"type": "string"}}, "gaps": {"type": "array", "items": {"type": "string"}}, "pricing": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["component", "cost"], "properties": {"component": {"enum": ["goods", "service", "transport", "insurance", "tax", "other"]}, "cost": {"$ref": "#/$defs/money"}}}}, "source": {"type": "object", "additionalProperties": false, "required": ["kind"], "properties": {"kind": {"enum": ["direct_provider", "authorized_api", "user_submitted", "other"]}, "description": {"type": "string"}, "observed_at": {"type": "string", "format": "date-time"}}}, "promotion": {"type": "object", "additionalProperties": false, "required": ["sponsored"], "properties": {"sponsored": {"type": "boolean"}, "disclosure": {"type": "string"}}}, "ranking_explanation": {"type": "string"}}},
+    "outcome": {"type": "object", "additionalProperties": false, "required": ["target_intent_id", "need_status", "transaction_status", "evidence_source"], "properties": {"target_intent_id": {"type": "string", "minLength": 1}, "need_status": {"enum": ["unknown", "unmet", "partially_satisfied", "satisfied"]}, "transaction_status": {"enum": ["none", "pending", "confirmed", "cancelled"]}, "evidence_source": {"enum": ["user_confirmed", "provider_confirmed", "verified_record", "inferred"]}, "evidence_note": {"type": "string"}}}
+  }
+}

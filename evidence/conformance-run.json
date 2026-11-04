@@ -1,0 +1,773 @@
+{
+  "protocol": "ODIP/0.1.3-exp.1",
+  "executed_at": "2026-11-04T05:34:19.664997+00:00",
+  "adapter_command": [
+    "python",
+    "reference/conformance_adapter.py"
+  ],
+  "scope": "Public vectors and state sequences; does not certify network security or independent implementation",
+  "profile": "full",
+  "skipped": [],
+  "total": 53,
+  "passed": 53,
+  "results": [
+    {
+      "id": "valid-capability.transport",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-fulfillment.quote",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-intent.publish",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-outcome.no_purchase",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-proposal.goods",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-proposal.nontransaction",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-intent.update",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-intent.withdraw",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-receipt.ack",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "missing-capability.advertise",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-fulfillment.quote",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent.publish",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-outcome.report",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-proposal.submit",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent.update",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent.withdraw",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-receipt.ack",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent-id-intent.publish",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent-id-intent.update",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent-id-intent.withdraw",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent-id-proposal.submit",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent-id-outcome.report",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "missing-intent-id-fulfillment.quote",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "bad-uuid",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "uppercase-uuid",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "valid-solution-service",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-solution-custom_solution",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-solution-no_match",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-unmet-confirmed",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "valid-inferred-pending",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "bad-version",
+      "passed": true,
+      "expected": {
+        "code": "VERSION_UNSUPPORTED"
+      },
+      "actual": {
+        "code": "VERSION_UNSUPPORTED"
+      }
+    },
+    {
+      "id": "non-utc-time",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "invalid-calendar-date",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "lowercase-time",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "rejected-without-code",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "bad-commerce-rate",
+      "passed": true,
+      "expected": {
+        "code": "SCHEMA_INVALID"
+      },
+      "actual": {
+        "code": "SCHEMA_INVALID"
+      }
+    },
+    {
+      "id": "unknown-noncritical-extension",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "id-mismatch",
+      "passed": true,
+      "expected": {
+        "code": "ID_MISMATCH"
+      },
+      "actual": {
+        "code": "ID_MISMATCH"
+      }
+    },
+    {
+      "id": "inferred-confirmed",
+      "passed": true,
+      "expected": {
+        "code": "INFERRED_ASSERTION"
+      },
+      "actual": {
+        "code": "INFERRED_ASSERTION"
+      }
+    },
+    {
+      "id": "inferred-satisfied",
+      "passed": true,
+      "expected": {
+        "code": "INFERRED_ASSERTION"
+      },
+      "actual": {
+        "code": "INFERRED_ASSERTION"
+      }
+    },
+    {
+      "id": "confirmed-no-evidence",
+      "passed": true,
+      "expected": {
+        "code": "EVIDENCE_REQUIRED"
+      },
+      "actual": {
+        "code": "EVIDENCE_REQUIRED"
+      }
+    },
+    {
+      "id": "commerce-overallocation",
+      "passed": true,
+      "expected": {
+        "code": "COMMERCE_INVALID"
+      },
+      "actual": {
+        "code": "COMMERCE_INVALID"
+      }
+    },
+    {
+      "id": "commerce-duplicate-beneficiary",
+      "passed": true,
+      "expected": {
+        "code": "COMMERCE_INVALID"
+      },
+      "actual": {
+        "code": "COMMERCE_INVALID"
+      }
+    },
+    {
+      "id": "commerce-valid",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "commerce-unconsented-disclosure",
+      "passed": true,
+      "expected": {
+        "code": null
+      },
+      "actual": {
+        "code": null
+      }
+    },
+    {
+      "id": "private-network-intent",
+      "passed": true,
+      "expected": {
+        "code": "PRIVACY_DENIED"
+      },
+      "actual": {
+        "code": "PRIVACY_DENIED"
+      }
+    },
+    {
+      "id": "commerce-precision-overallocation",
+      "passed": true,
+      "expected": {
+        "code": "COMMERCE_INVALID"
+      },
+      "actual": {
+        "code": "COMMERCE_INVALID"
+      }
+    },
+    {
+      "id": "core-lifecycle",
+      "passed": true,
+      "expected": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          }
+        ]
+      },
+      "actual": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "lifecycle",
+      "passed": true,
+      "expected": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          }
+        ]
+      },
+      "actual": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate-and-conflict",
+      "passed": true,
+      "expected": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "duplicate",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "ID_CONFLICT"
+          }
+        ]
+      },
+      "actual": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "duplicate",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "ID_CONFLICT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "authorization-revision-withdrawal",
+      "passed": true,
+      "expected": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "FORBIDDEN"
+          },
+          {
+            "status": "rejected",
+            "code": "REVISION_CONFLICT"
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "INTENT_WITHDRAWN"
+          }
+        ]
+      },
+      "actual": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "FORBIDDEN"
+          },
+          {
+            "status": "rejected",
+            "code": "REVISION_CONFLICT"
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "INTENT_WITHDRAWN"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-links",
+      "passed": true,
+      "expected": {
+        "results": [
+          {
+            "status": "rejected",
+            "code": "UNKNOWN_INTENT"
+          },
+          {
+            "status": "rejected",
+            "code": "UNKNOWN_INTENT"
+          },
+          {
+            "status": "rejected",
+            "code": "UNKNOWN_MESSAGE"
+          }
+        ]
+      },
+      "actual": {
+        "results": [
+          {
+            "status": "rejected",
+            "code": "UNKNOWN_INTENT"
+          },
+          {
+            "status": "rejected",
+            "code": "UNKNOWN_INTENT"
+          },
+          {
+            "status": "rejected",
+            "code": "UNKNOWN_MESSAGE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate-domain-ids",
+      "passed": true,
+      "expected": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "INTENT_EXISTS"
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "PROPOSAL_EXISTS"
+          }
+        ]
+      },
+      "actual": {
+        "results": [
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "INTENT_EXISTS"
+          },
+          {
+            "status": "accepted",
+            "code": null
+          },
+          {
+            "status": "rejected",
+            "code": "PROPOSAL_EXISTS"
+          }
+        ]
+      }
+    }
+  ]
+}

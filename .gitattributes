@@ -1,0 +1,6 @@
+# Preserve exact bytes so baseline and release SHA-256 inventories survive checkout.
+* -text whitespace=cr-at-eol
+# Markdown hard breaks and preserved upstream license text are intentional.
+*.md whitespace=-blank-at-eol,cr-at-eol
+baseline/** -whitespace
+LICENSES/** -whitespace

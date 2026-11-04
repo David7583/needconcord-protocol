@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ODIP optional commerce disclosure extension 0.1.3-exp.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "service_type",
+    "charge_model",
+    "fee_rate",
+    "fee_basis",
+    "charge_trigger",
+    "consent_recorded"
+  ],
+  "properties": {
+    "service_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "charge_model": {
+      "enum": [
+        "success_fee",
+        "subscription",
+        "fixed_fee",
+        "usage_fee"
+      ]
+    },
+    "fee_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "fee_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "charge_trigger": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consent_recorded": {
+      "type": "boolean"
+    },
+    "charge_unit_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "payout_splits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "beneficiary",
+          "share_rate"
+        ],
+        "properties": {
+          "beneficiary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "share_rate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "maxItems": 100
+    },
+    "refund_policy_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "disclosure": {
+      "type": "string"
+    }
+  },
+  "$comment": "Modified from 0.1.2 baseline: bounded nonempty charge unit IDs and refund references. share_rate uses fee_basis, not a fraction of fee income; semantic sum <= fee_rate. Disclosure is not payment authorization."
+}

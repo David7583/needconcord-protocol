@@ -1,0 +1,307 @@
+{
+  "synthetic": true,
+  "transport": "loopback HTTP serialized UTF-8 JSON",
+  "cross_implementation_verified": false,
+  "production_security_verified": false,
+  "passed": true,
+  "events": [
+    {
+      "event": "start",
+      "node": "a",
+      "pid": 9696,
+      "launcher_pid": 16828,
+      "port": 61561,
+      "database": "a.sqlite3"
+    },
+    {
+      "event": "start",
+      "node": "b",
+      "pid": 28816,
+      "launcher_pid": 25480,
+      "port": 61562,
+      "database": "b.sqlite3"
+    },
+    {
+      "event": "send",
+      "from": "a",
+      "to": "b",
+      "type": "intent.publish",
+      "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+      "wire_sha256": "e0f03562fc9957039610a61c34ce7e60ee4771cb6a5bc50d4001379a297c0f75",
+      "result": {
+        "status": "accepted",
+        "code": "OK",
+        "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+        "receipt": {
+          "protocol": "ODIP/0.1.3-exp.1",
+          "message_id": "358132f0-fe7a-44d5-8a9d-b570c613c2f0",
+          "message_type": "receipt.ack",
+          "timestamp": "2026-11-04T05:34:32.975684Z",
+          "sender": {
+            "participant_id": "test-node-b"
+          },
+          "payload": {
+            "original_message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+            "status": "accepted"
+          }
+        }
+      }
+    },
+    {
+      "event": "send",
+      "from": "a",
+      "to": "b",
+      "type": "intent.publish",
+      "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+      "wire_sha256": "e0f03562fc9957039610a61c34ce7e60ee4771cb6a5bc50d4001379a297c0f75",
+      "result": {
+        "status": "duplicate",
+        "code": "OK",
+        "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+        "receipt": {
+          "protocol": "ODIP/0.1.3-exp.1",
+          "message_id": "3572095b-b22f-4425-8387-c79b3ab36ff6",
+          "message_type": "receipt.ack",
+          "timestamp": "2026-11-04T05:34:33.269952Z",
+          "sender": {
+            "participant_id": "test-node-b"
+          },
+          "payload": {
+            "original_message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+            "status": "duplicate"
+          }
+        }
+      }
+    },
+    {
+      "event": "conflicting-replay",
+      "http_status": 409,
+      "result": {
+        "protocol": "ODIP/0.1.3-exp.1",
+        "message_id": "4c5e048b-de3c-49b5-aafc-7620a4570425",
+        "message_type": "receipt.ack",
+        "timestamp": "2026-11-04T05:34:33.320724Z",
+        "sender": {
+          "participant_id": "test-node-b"
+        },
+        "payload": {
+          "original_message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+          "status": "rejected",
+          "reason_code": "ID_CONFLICT"
+        }
+      }
+    },
+    {
+      "event": "send",
+      "from": "b",
+      "to": "a",
+      "type": "proposal.submit",
+      "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e3",
+      "wire_sha256": "dea7522171b0998fc305c9a251b52595ab820846edd875c95aab5d61d2ec44a3",
+      "result": {
+        "status": "accepted",
+        "code": "OK",
+        "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e3",
+        "receipt": {
+          "protocol": "ODIP/0.1.3-exp.1",
+          "message_id": "247846a5-29e9-49a0-9842-e9ceb80de2ad",
+          "message_type": "receipt.ack",
+          "timestamp": "2026-11-04T05:34:33.596818Z",
+          "sender": {
+            "participant_id": "test-node-a"
+          },
+          "payload": {
+            "original_message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e3",
+            "status": "accepted"
+          }
+        }
+      }
+    },
+    {
+      "event": "send",
+      "from": "b",
+      "to": "a",
+      "type": "proposal.submit",
+      "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e2",
+      "wire_sha256": "fd2e9635aaf5e9812d18b37d302329f27a55b212121758a346e20f423849763d",
+      "result": {
+        "status": "accepted",
+        "code": "OK",
+        "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e2",
+        "receipt": {
+          "protocol": "ODIP/0.1.3-exp.1",
+          "message_id": "c475c03d-7e28-47a4-b726-14ec810508bb",
+          "message_type": "receipt.ack",
+          "timestamp": "2026-11-04T05:34:33.915767Z",
+          "sender": {
+            "participant_id": "test-node-a"
+          },
+          "payload": {
+            "original_message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e2",
+            "status": "accepted"
+          }
+        }
+      }
+    },
+    {
+      "event": "send",
+      "from": "a",
+      "to": "b",
+      "type": "outcome.report",
+      "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e4",
+      "wire_sha256": "64b806df7aeaa4edbffad3e2d9961adbae76406ac1ca219cbc32fce03c1a9e02",
+      "result": {
+        "status": "accepted",
+        "code": "OK",
+        "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e4",
+        "receipt": {
+          "protocol": "ODIP/0.1.3-exp.1",
+          "message_id": "8efb9ad3-0d9f-4cb0-9808-485c9f1db2f1",
+          "message_type": "receipt.ack",
+          "timestamp": "2026-11-04T05:34:34.213025Z",
+          "sender": {
+            "participant_id": "test-node-b"
+          },
+          "payload": {
+            "original_message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e4",
+            "status": "accepted"
+          }
+        }
+      }
+    },
+    {
+      "event": "stop",
+      "node": "b",
+      "pid": 25480
+    },
+    {
+      "event": "send",
+      "from": "a",
+      "to": "b",
+      "type": "capability.advertise",
+      "message_id": "0dfac916-3e7a-4cdd-8ebe-94a5b6ed04f0",
+      "wire_sha256": "c562b3a4fd5e2232b010dcbf021747c860a33708c1eebe9718e9a7ab28c73956",
+      "result": {
+        "status": "pending",
+        "code": "TIMEOUT",
+        "message_id": "0dfac916-3e7a-4cdd-8ebe-94a5b6ed04f0"
+      }
+    },
+    {
+      "event": "start",
+      "node": "b",
+      "pid": 29292,
+      "launcher_pid": 29876,
+      "port": 61562,
+      "database": "b.sqlite3"
+    },
+    {
+      "event": "ack-loss-injected",
+      "message_id": "0dfac916-3e7a-4cdd-8ebe-94a5b6ed04f0",
+      "persisted_at_receiver": true
+    },
+    {
+      "event": "stop",
+      "node": "b",
+      "pid": 29876
+    },
+    {
+      "event": "start",
+      "node": "b",
+      "pid": 13968,
+      "launcher_pid": 10416,
+      "port": 61562,
+      "database": "b.sqlite3"
+    },
+    {
+      "event": "retry-after-restart",
+      "results": [
+        {
+          "status": "duplicate",
+          "code": "OK",
+          "message_id": "0dfac916-3e7a-4cdd-8ebe-94a5b6ed04f0",
+          "receipt": {
+            "protocol": "ODIP/0.1.3-exp.1",
+            "message_id": "4870f3c7-9eda-4428-b140-2840876040e7",
+            "message_type": "receipt.ack",
+            "timestamp": "2026-11-04T05:34:38.657114Z",
+            "sender": {
+              "participant_id": "test-node-b"
+            },
+            "payload": {
+              "original_message_id": "0dfac916-3e7a-4cdd-8ebe-94a5b6ed04f0",
+              "status": "duplicate"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "send",
+      "from": "a",
+      "to": "b",
+      "type": "intent.publish",
+      "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+      "wire_sha256": "e0f03562fc9957039610a61c34ce7e60ee4771cb6a5bc50d4001379a297c0f75",
+      "result": {
+        "status": "duplicate",
+        "code": "OK",
+        "message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+        "receipt": {
+          "protocol": "ODIP/0.1.3-exp.1",
+          "message_id": "aed5aec4-e123-49f8-b414-84ae3031c590",
+          "message_type": "receipt.ack",
+          "timestamp": "2026-11-04T05:34:38.946342Z",
+          "sender": {
+            "participant_id": "test-node-b"
+          },
+          "payload": {
+            "original_message_id": "3a517f10-6b4d-4cb1-a614-94f0032d13e1",
+            "status": "duplicate"
+          }
+        }
+      }
+    },
+    {
+      "event": "independent-storage",
+      "participants": [
+        "test-node-a",
+        "test-node-b"
+      ],
+      "message_counts": {
+        "a": 10,
+        "b": 7
+      },
+      "pending": 0
+    },
+    {
+      "event": "stop",
+      "node": "a",
+      "pid": 16828
+    },
+    {
+      "event": "stop",
+      "node": "b",
+      "pid": 10416
+    }
+  ],
+  "node_logs": {
+    "a": [
+      "{\"event\": \"listening\", \"pid\": 9696, \"host\": \"127.0.0.1\", \"port\": 61561, \"participant_id\": \"test-node-a\", \"test_identity_only\": true}",
+      "{\"event\": \"receive\", \"message_id\": \"3a517f10-6b4d-4cb1-a614-94f0032d13e3\", \"type\": \"proposal.submit\", \"status\": \"accepted\"}",
+      "{\"event\": \"receive\", \"message_id\": \"3a517f10-6b4d-4cb1-a614-94f0032d13e2\", \"type\": \"proposal.submit\", \"status\": \"accepted\"}"
+    ],
+    "b": [
+      "{\"event\": \"listening\", \"pid\": 28816, \"host\": \"127.0.0.1\", \"port\": 61562, \"participant_id\": \"test-node-b\", \"test_identity_only\": true}",
+      "{\"event\": \"receive\", \"message_id\": \"3a517f10-6b4d-4cb1-a614-94f0032d13e1\", \"type\": \"intent.publish\", \"status\": \"accepted\"}",
+      "{\"event\": \"receive\", \"message_id\": \"3a517f10-6b4d-4cb1-a614-94f0032d13e1\", \"type\": \"intent.publish\", \"status\": \"duplicate\"}",
+      "{\"event\": \"reject\", \"code\": \"ID_CONFLICT\"}",
+      "{\"event\": \"receive\", \"message_id\": \"3a517f10-6b4d-4cb1-a614-94f0032d13e4\", \"type\": \"outcome.report\", \"status\": \"accepted\"}",
+      "{\"event\": \"listening\", \"pid\": 29292, \"host\": \"127.0.0.1\", \"port\": 61562, \"participant_id\": \"test-node-b\", \"test_identity_only\": true}",
+      "{\"event\": \"connection_error\", \"code\": \"INTERNAL_ERROR\"}",
+      "{\"event\": \"listening\", \"pid\": 13968, \"host\": \"127.0.0.1\", \"port\": 61562, \"participant_id\": \"test-node-b\", \"test_identity_only\": true}",
+      "{\"event\": \"receive\", \"message_id\": \"0dfac916-3e7a-4cdd-8ebe-94a5b6ed04f0\", \"type\": \"capability.advertise\", \"status\": \"duplicate\"}",
+      "{\"event\": \"receive\", \"message_id\": \"3a517f10-6b4d-4cb1-a614-94f0032d13e1\", \"type\": \"intent.publish\", \"status\": \"duplicate\"}"
+    ]
+  }
+}
