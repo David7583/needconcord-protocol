@@ -1,6 +1,8 @@
-# NeedConcord Protocol
+# NeedConcord Protocol（NCP）
 
 开放需求互操作协议。**版本 `0.1.3-exp.1`，Experimental Draft / Experimental Pre-release。** 公开名称为 **NeedConcord Protocol**；沿用已验证的机器协议标识 **`ODIP/0.1.3-exp.1`**。
+
+**验证状态：已通过 Schema 验证和本地独立进程验证；生产网络安全与跨实现互操作尚未验证，未宣称通过。** 实验版结果为 91/91 工程测试、53/53 完整符合性、42/42 核心符合性（另 11 项可选能力跳过）。证据对应已发布的 `v0.1.3-exp.1` 快照，见 [验证范围](docs/VALIDATION.md)。
 
 本项目从 Open Demand Interoperability Protocol（ODIP）草案演进而来。本次只调整公开名称和文档展示；Schema 标识、消息字段、`odip` Python 模块及命令保持不变，文中的 ODIP 技术简称仍指同一协议。名称不构成商标排他权或第三方认可声明；未来若调整 wire 标识，将通过明确版本和迁移规则进行。
 
