@@ -1,5 +1,7 @@
 # 变更记录
 
+**简体中文** | [English](CHANGELOG.en.md)
+
 ## 0.1.3-exp.1 — 2026-11-04，Experimental Draft / Pre-release
 
 - 公开名称采用 NeedConcord Protocol；保留 `ODIP/0.1.3-exp.1` wire 标识及现有 Schema、消息结构、测试向量和 Python 模块。名称调整不产生新的 wire 兼容性变化。

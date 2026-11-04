@@ -1,5 +1,7 @@
 # NeedConcord Protocol 0.1.3-exp.1 — 开放需求互操作协议
 
+**简体中文** | [English](SPEC-en.md)
+
 **公开名称：** NeedConcord Protocol  
 **历史工作名：** Open Demand Interoperability Protocol（ODIP）  
 **状态：** Experimental Draft / 实验性草案，非正式行业标准  

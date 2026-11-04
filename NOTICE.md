@@ -1,5 +1,7 @@
 # NeedConcord Protocol 来源与许可告知
 
+**简体中文** | [English](NOTICE.en.md)
+
 公开名称：NeedConcord Protocol / 开放需求互操作协议。历史工作名：Open Demand Interoperability Protocol（ODIP）。wire 标识：`ODIP/0.1.3-exp.1`。日期：2026-11-04。
 
 Project Initiator / Initial Maintainer：David7583。

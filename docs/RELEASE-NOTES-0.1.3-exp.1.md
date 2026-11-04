@@ -1,5 +1,7 @@
 # NeedConcord Protocol 0.1.3-exp.1 — Experimental Pre-release
 
+**简体中文** | [English](RELEASE-NOTES-0.1.3-exp.1.en.md)
+
 定位：Experimental Draft / Experimental Pre-release。本版本不是正式标准、行业认证或生产商业网络。
 
 公开名称采用 **NeedConcord Protocol**，历史工作名为 Open Demand Interoperability Protocol（ODIP）。机器协议标识继续使用 **`ODIP/0.1.3-exp.1`**。名称调整不改变 Schema 标识、消息字段、测试向量、`odip` 模块或既有协议规则；无需为此转换已存消息。未来如修改机器标识，须通过正式版本迁移。

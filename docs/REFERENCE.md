@@ -1,5 +1,7 @@
 # 独立进程参考节点
 
+**简体中文** | [English](REFERENCE.en.md)
+
 本教程只使用模拟数据、loopback HTTP 和临时测试凭据。两节点采用同一 Python 实现，但进程和 SQLite 存储分离。准备环境后，最短证据命令为：
 
 ```powershell

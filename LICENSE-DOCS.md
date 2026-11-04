@@ -1,5 +1,7 @@
 # 文档与项目许可范围
 
+**简体中文** | [English](LICENSE-DOCS.en.md)
+
 2026-11-04 实验版整理。项目公开名称为 NeedConcord Protocol，发起者与初始维护者公开展示名为 David7583。本文件说明公开材料的许可范围，未将内部研发档案默认纳入发布。
 
 依据项目发起者的明确授权：对其原创或依法拥有授权权利的内容，代码、JSON Schema、参考实现、测试代码和机器可读测试数据采用 **Apache License 2.0**（[完整文本](LICENSE)）；原创协议规范、技术文档和说明文字采用 **Creative Commons Attribution 4.0 International（CC BY 4.0）**（[完整文本](LICENSES/CC-BY-4.0.txt)，[官方文本](https://creativecommons.org/licenses/by/4.0/legalcode.en)）。

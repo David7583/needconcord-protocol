@@ -1,5 +1,7 @@
 # NeedConcord Protocol 路线图
 
+**简体中文** | [English](ROADMAP.en.md)
+
 1. 本实验版：公开可读的实验规范、Schema、符合性向量、最小本地可实施性证据与 GitHub 社区材料。公开名称采用 NeedConcord Protocol，wire 保持 `ODIP/0.1.3-exp.1`。
 2. 社区反馈：通过 Issues、PR、Discussions 收集不同领域反馈与独立实现证据。参与不是认证；功能可用性以仓库实际设置为准。
 3. 后续 RFC：跨团队/跨语言独立实现测试、版本协商、扩展注册约定与更完整授权/证据表达。

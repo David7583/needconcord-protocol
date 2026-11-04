@@ -1,5 +1,7 @@
 # 版本与迁移
 
+**简体中文** | [English](MIGRATION.en.md)
+
 公开名称为 **NeedConcord Protocol**，历史工作名为 Open Demand Interoperability Protocol（ODIP）。本次名称调整只影响文档展示与发布包名称；wire 标识仍为 `ODIP/0.1.3-exp.1`，Schema 标识、消息字段、测试数据及 `odip` Python 模块均不改名。已经使用该 wire 版本的实现无需为公开名称变更转换消息；不要替换存储消息中的 `ODIP` 字样或改变原字节摘要。未来如统一机器标识，将另行定义版本、迁移步骤与兼容性测试。
 
 本次从 `ODIP/0.1.2` 草案修订，实验版 wire 标识为 `ODIP/0.1.3-exp.1`，Python 工程版本映射为 `0.1.3.dev1`。完整历史档案由维护者离线保留；公开包中的 `tests/fixtures/v0.1.2/` 提供迁移所需最小旧版 Schema 与模拟输入。

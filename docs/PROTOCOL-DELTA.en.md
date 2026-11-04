@@ -1,0 +1,35 @@
+# Protocol revisions and compatibility proposal
+
+[简体中文](PROTOCOL-DELTA.md) | **English**
+
+This is the English translation of the [Chinese revision record](PROTOCOL-DELTA.md). For the current normative protocol prose, see the [Chinese specification](../SPEC-zh-CN.md); the [English specification](../SPEC-en.md) is a translation for implementers.
+
+Status: on 2026-11-04, `ODIP/0.1.3-exp.1` was published as an Experimental Pre-release. This table records the basis for its revisions relative to v0.1.2. The source is the v0.1.2 draft designated by the initiator, with complete original archives retained offline. The public package includes this table and minimal compatibility fixtures to help independent implementers understand the differences. These revisions do not rewrite the protocol's goals or introduce payments, a central directory, platform accounts or a protocol tax.
+
+A new experimental identifier was chosen because **narrowing the set of accepted inputs is also a compatibility change**. Reusing `ODIP/0.1.2` would let two implementations reach opposite decisions about the same packet. A separate identifier in the `0.x` experimental stage does not imply the backward compatibility of a stable SemVer patch release. The identifier for this release is `ODIP/0.1.3-exp.1`.
+
+| Change | Baseline evidence | Treatment in this candidate | Impact and migration |
+|---|---|---|---|
+| Missing correlation ID in need-related messages | §2.2 describes need correlation; the schema does not conditionally require the field | S-02 requires `intent_id` for the six need-related message types | Reject old messages missing the field; recover the association from trusted context, never invent a random association |
+| Inconsistent cross-field correlation | JSON Schema cannot compare two fields | M-01 requires `target_intent_id` to match the envelope within the same packet | Correct erroneous data and retain the original packet for audit; changing only the version is insufficient |
+| Inconsistent UTC formatting | §2.2 requires UTC; date-time can accept offsets | S-04 requires uppercase T/Z, at most six fractional digits and a valid date | Convert an offset time using its actual time zone; preserve the original input rather than merely removing the offset |
+| Claims of a transaction or resolution based on inferred evidence | §5 prohibits them; the schema does not prevent them | M-02 supplies separate semantic validation; M-03 requires an explanation for confirmed status | Downgrade to unknown/unmet/pending or obtain genuine confirmation; do not fabricate provenance |
+| Unvalidated commerce extension | The packet accepts arbitrary extensions | S-06 inlines the known extension's structure; M-04 constrains revenue sharing | Reject malformed known extensions; continue to ignore unknown non-critical extensions |
+| Ambiguous revenue-share denominator | Example: 0.0035=0.002+0.0015 | This candidate interprets the shares as rates on the same `fee_basis`, whose sum does not exceed the total rate | Old implementations using “shares of service-fee revenue” need an explicit conversion; the semantic choice requires public review |
+| Fee declarations and authorization | `consent_recorded` is only a Boolean declaration | Under M-05, false denotes a disclosure without recorded consent that can still be exchanged; no value automatically creates a right to payment | No movement of funds; contractual authorization and per-billing-unit verification are not implemented |
+| Whether gaps are required | The required-content column in §2.1 conflicts with §4 and the schema | Clarify that gaps are optional; known gaps should be disclosed, and absence does not mean there are no gaps | Preserve the existing set of accepted fields |
+| Whether source.observed_at is required | The prose in §10 conflicts with the schema | Clarify SHOULD; absence means freshness is unknown | Do not invent a collection time |
+| Promise of compatibility for optional core fields | §12 conflicts with additionalProperties=false | Close the core field set; only unknown non-critical extensions may be ignored | New core fields require a new version; do not claim that arbitrary optional fields are automatically compatible |
+| Idempotency and conflicts | The demo checks IDs only, without comparing content | T-02 requires equal raw UTF-8 bytes; the same ID with different bytes is a conflict | Retries must reuse the original bytes; this is not JSON semantic canonicalization |
+| Message state and authorization | The original specification defines no state machine | ST-01 through ST-07 define a local, strictly ordered experimental profile | Out-of-order messages require retry; withdrawal ends that intent; cross-organization delegated authorization remains undefined |
+| Receipt rejection reasons | reason_code is optional | S-05 requires a nonempty code for rejected status | Old rejection packets without a reason do not conform to this candidate |
+| Field lengths | Some IDs have no length limit | Limit each correlation/participant ID to 128 characters | Overlong IDs require an explicit mapping agreed by both parties; truncation must not cause collisions |
+| UUID letter case | format uuid accepts uppercase variants | Require lowercase hexadecimal in the standard hyphenated form | Normalize before sending a new candidate message; never alter the bytes of an already-delivered message and then retry with the same ID |
+
+The names and principal meanings of the affected core fields, and all seven core message types, are retained. `fulfillment.quote` remains an optional capability, and commercial disclosure remains optional. Support in the reference implementation does not mean that every ODIP core implementation must support the commerce and fulfillment extensions.
+
+Revenue sharing has two possible interpretations: rates on the transaction's billing basis, or shares of service-fee revenue. The former is recommended because the original example gives directly additive rates. This candidate only makes that interpretation testable; it executes no revenue sharing and does not make a final decision for maintainers about commercial-contract semantics. If the interpretation cannot be confirmed, commerce should be labeled an unstable optional extension at release, with no silent migration.
+
+This candidate does not automatically import old messages. Migration MUST validate the old version, check fields, obtain genuine correlation/provenance information, explicitly create candidate messages, and record mappings between old and new messages. Do not alter the original bytes of an already-delivered message and retry with the same ID; cross-version migration should use a new `message_id`. Original audit packets should remain offline, subject to authorization and retention periods.
+
+Reviewable materials include the [public vector guide](../conformance/README.en.md), [manifest](../conformance/manifest.json) and [complete candidate specification in English](../SPEC-en.md). These materials can be used by implementations in other languages and do not depend on the reference implementation's private database structure.

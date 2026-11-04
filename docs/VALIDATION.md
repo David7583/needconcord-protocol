@@ -1,5 +1,7 @@
 # 验证范围 / Validation scope
 
+**简体中文** | [English](VALIDATION.en.md)
+
 公开名称与版本：**NeedConcord Protocol 0.1.3-exp.1**（Experimental Draft / Pre-release）；wire 标识：`ODIP/0.1.3-exp.1`。本目录与 `evidence/` 描述经审查公开文件树的实际运行结果，不要求读者获取内部研发档案。公开名称调整没有修改 Schema、消息字段或符合性规则。
 
 | 声明 / Claim | 状态 / Status |

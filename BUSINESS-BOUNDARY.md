@@ -1,5 +1,7 @@
 # NeedConcord Protocol 商业与协议边界
 
+**简体中文** | [English](BUSINESS-BOUNDARY.en.md)
+
 本文同样适用于沿用的 `ODIP/0.1.3-exp.1` wire 协议；公开名称调整不改变下列边界。
 
 1. 协议免费，不强制使用任何平台或指定清算账户。使用 ODIP 不自动对协议创建者构成付款义务。

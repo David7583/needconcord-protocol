@@ -1,5 +1,7 @@
 # NeedConcord Protocol 公开符合性测试资产
 
+**简体中文** | [English](README.en.md)
+
 本目录面向独立实现者。测试数据全部为模拟数据；身份、商品、报价与确认声明均不代表真实组织接入。公开名称为 NeedConcord Protocol，协议 wire 标识保留 `ODIP/0.1.3-exp.1`。文本合同见 [规范第 15 节](../SPEC-zh-CN.md)，结构合同见 [packet Schema](../schemas/packet.schema.json)。这些是实验版公开符合性测试资产。授权边界见 [来源记录](../docs/PROVENANCE.md)。
 
 不要求使用 Python 实现协议；JSON 测试数据与预期结果不导入参考实现。`manifest.json` 中：

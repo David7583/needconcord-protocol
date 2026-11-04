@@ -1,5 +1,7 @@
 # 环境与复现
 
+**简体中文** | [English](ENVIRONMENT.en.md)
+
 公开参考工程固定 CPython **3.12.7**、Windows x86_64，使用仓库内 `.venv` 隔离依赖。它不要求指定发行商、全局包、工作台或商业平台。运行者自行准备该版本解释器；不修改全局 PATH、系统 Python 或其他项目环境。
 
 `.python-version` 声明解释器版本，`requirements.lock` 固定依赖与 wheel SHA-256（包括测试工具）。本锁覆盖 Windows CPython 3.12 x86_64，不声称跨操作系统重现；其他平台应单独审核锁文件并运行同一公开测试。依赖告知见 [许可清单](../LICENSES/dependency-licenses.json)。没有把版本锁定等同于已完成漏洞审计。
@@ -29,7 +31,3 @@
 `rfc3339-validator` 是日期格式断言所需的锁定依赖；服务启动会检查非法日期确实被拒绝，依赖缺失时拒绝静默放行。公开验证结果及覆盖口径见 [VALIDATION.md](VALIDATION.md)。
 
 配置 token 仅用于测试身份绑定，不代表真实组织认证。手工启动、重试与导出见 [参考节点](REFERENCE.md)。
-
-## English
-
-Use CPython 3.12.7 on Windows x86_64 and a project-local virtual environment. From the repository root, run the initialization command and `scripts/verify.py --public --report-dir evidence`. The public package contains the minimal compatibility fixtures and does not require private archives. The lock is platform-specific; it is not a production security assessment. Keep temporary credentials and databases out of published artifacts.
